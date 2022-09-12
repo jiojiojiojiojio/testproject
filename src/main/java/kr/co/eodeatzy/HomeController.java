@@ -43,6 +43,7 @@ public class HomeController {
 		
 		return "testpage";
 	}	
+	
 	@RequestMapping(value = "returnhome", method = RequestMethod.GET)
 	public String returnhome(Locale locale,Model model) {
 		Date date = new Date();
@@ -53,6 +54,48 @@ public class HomeController {
 		model.addAttribute("serverTime", formattedDate );		
 		return "home";
 	}	
+	
+	@RequestMapping(value ="store_info", method = RequestMethod.GET)
+	public String store_info() {
+		
+		return "store_info";
+	}
+	
+	@RequestMapping(value ="store_search", method = RequestMethod.GET)
+	public String storesearch() {
+		
+		return "store_search";
+	}
+	
+	@RequestMapping(value ="menu_list", method = RequestMethod.GET)
+	public String menu_list() {
+		
+		return "menu_list";
+	}
+	
+	@RequestMapping(value ="pendingorder", method = RequestMethod.GET)
+	public String pendingorder() {
+		
+		return "pendingorder";
+	}
+	
+	@RequestMapping(value ="orderlist", method = RequestMethod.GET)
+	public String orderlist() {
+		
+		return "orderlist";
+	}
+	
+	@RequestMapping(value ="store_main", method = RequestMethod.GET)
+	public String store_main() {
+		
+		return "store_main";
+	}
+	
+	@RequestMapping(value ="payment", method = RequestMethod.GET)
+	public String payment() {
+		
+		return "payment";
+	}
 	
 
 }
